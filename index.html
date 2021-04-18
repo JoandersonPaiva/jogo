@@ -32,17 +32,44 @@
     <main class="lados">
         <aside class="try">
             <div class="num">
-                <input type="number" id="Number" min="1" max="20">
+                <input type="number" id="number" min="1" max="20">
             </div>
             <div class="submit">
-                <button type="submit">Check!</button>
+                <button type="submit" onclick="jogada()">Check!</button>
             </div>
         </aside>
         <aside class="result">
             <div class="dica">Chutando ...</div>
-            <div class="pontuacao">&#x1F4AF Pontuação: 20</div>
-            <div class="melhor-ponto">&#x1F3C6 Pontucação Máxima: 0</div>
+            <div class="ponto">&#x1F4AF Pontuação:</div>
+            <div class="pontuacao"> 20 </div>
+            <div class="melhor-ponto">&#x1F3C6 Pontuação Máxima: 0</div>
         </aside>
     </main>
+    <script>
+        var meuNum = Math.floor(Math.random() * 20) + 1;
+        function jogada() {
+            var jogador = document.getElementById('number').value
+            var dica = document.getElementsByClassName('dica')[0]
+            var corpo = document.getElementsByTagName('body')[0]
+            var ponto = document.getElementsByClassName('pontuacao')[0]
+            var pontos = 20
+            if(meuNum > jogador){
+                dica.innerHTML = 'Um pouco mais ...'
+                pontos -= 1
+                ponto.innerText = `${pontos} `
+            }
+            else if(meuNum < jogador) {
+                dica.innerHTML = 'Um pouco menos...'
+                pontos -= 1
+                ponto.innerHTML = `${pontos} `
+            }
+            else {
+                dica.innerHTML = 'Na mosca!!!'
+                corpo.style.background = 'green'
+                corpo.style.color = 'black'
+                ponto.innerHTML = `${pontos} `
+            }
+        }
+    </script>
 </body>
 </html>

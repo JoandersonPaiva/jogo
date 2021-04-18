@@ -115,3 +115,9 @@ input {
 .melhor-ponto {
     margin-top: 4%;
 }
+.ponto {
+    display: inline;
+}
+.pontuacao {
+    display: inline;
+}
