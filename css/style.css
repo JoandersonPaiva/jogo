@@ -4,7 +4,7 @@
 }
 
 body {
-    background-color: rgb(37, 35, 35);
+    background-color: rgb(22, 21, 21);
     font-family: 'Press Start 2P';
     color: white;
     overflow: hidden;
@@ -70,10 +70,10 @@ div.num {
     padding-top: 19%;
     padding-left: 25%;
 }
-input {
+#number {
     width: 240px;
     height: 100px;
-    background: rgb(34, 34, 33);
+    background: rgb(22, 21, 21);
     border: solid white;
     font-family: inherit;
     color: inherit;

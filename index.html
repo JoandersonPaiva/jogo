@@ -49,6 +49,7 @@
         var meuNum = Math.floor(Math.random() * 20) + 1;
         function jogada() {
             var jogador = document.getElementById('number').value
+            var caixa = document.getElementById('number')
             var dica = document.getElementsByClassName('dica')[0]
             var corpo = document.getElementsByTagName('body')[0]
             var ponto = document.getElementsByClassName('pontuacao')[0]
@@ -66,6 +67,8 @@
             else {
                 dica.innerHTML = 'Na mosca!!!'
                 corpo.style.background = 'green'
+                caixa.style.background = 'green'
+                caixa.style.borderColor = 'black'
                 corpo.style.color = 'black'
                 ponto.innerHTML = `${pontos} `
             }
