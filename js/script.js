@@ -8,7 +8,7 @@ function jogada() {
     var corpo = document.getElementsByTagName('body')[0]
     var ponto = document.getElementsByClassName('pontuacao')[0]   
     var valor = document.getElementsByClassName('pontuacao')[0].value
-    var pontuacao = parseInt(ponto)
+    var pontuacao = parseInt(valor)
     if(meuNum > jogador){
         dica.innerHTML = 'Um pouco mais ...'
 
