@@ -41,38 +41,10 @@
         <aside class="result">
             <div class="dica">Chutando ...</div>
             <div class="ponto">&#x1F4AF Pontuação:</div>
-            <div class="pontuacao"> 20 </div>
+            <div class="pontuacao">20</div>
             <div class="melhor-ponto">&#x1F3C6 Pontuação Máxima: 0</div>
         </aside>
     </main>
-    <script>
-        var meuNum = Math.floor(Math.random() * 20) + 1;
-        function jogada() {
-            var jogador = document.getElementById('number').value
-            var caixa = document.getElementById('number')
-            var dica = document.getElementsByClassName('dica')[0]
-            var corpo = document.getElementsByTagName('body')[0]
-            var ponto = document.getElementsByClassName('pontuacao')[0]
-            var pontos = 20
-            if(meuNum > jogador){
-                dica.innerHTML = 'Um pouco mais ...'
-                pontos -= 1
-                ponto.innerText = `${pontos}`
-            }
-            else if(meuNum < jogador) {
-                dica.innerHTML = 'Um pouco menos...'
-                pontos -= 1
-                ponto.innerHTML = `${pontos}`
-            }
-            else {
-                dica.innerHTML = 'Na mosca!!!'
-                corpo.style.background = 'green'
-                caixa.style.background = 'green'
-                caixa.style.borderColor = 'black'
-                corpo.style.color = 'black'
-                ponto.innerHTML = `${pontos}`
-            }
-        }
-    </script>
+    <script src="js/script.js"></script>
 </body>
 </html>
