@@ -1,28 +1,32 @@
-var meuNum = Math.floor(Math.random() * 20) + 1; //número aleatório de 1 a 20
+function gerarNum(){
+    const meuNum = Math.floor(Math.random() * 20) + 1; //número aleatório de 1 a 20
+    return meuNum
+}
+const maquina = gerarNum()
+let maxPontuacao = 0
+let tentativa = 20
+function tentativas() {
+    tentativa --
+    return tentativa
+}
 
-function jogada() {   
-    
-    var jogador = document.getElementById('number').value
-    var caixa = document.getElementById('number')
-    var dica = document.getElementsByClassName('dica')[0]
-    var corpo = document.getElementsByTagName('body')[0]
-    var ponto = document.getElementsByClassName('pontuacao')[0]   
-    var valor = document.getElementsByClassName('pontuacao')[0].value
-    var pontuacao = parseInt(valor)
-    if(meuNum > jogador){
-        dica.innerHTML = 'Um pouco mais ...'
 
-        ponto.innerHTML = `${pontuacao}` 
+function jogada() {
+    let dica = document.getElementsByClassName('dica')[0]
+    let ponto = document.getElementById('ponto')
+    let palpite = document.getElementById('number').value
+    let melhorPonto = document.getElementsByClassName('melhorPonto')[0]
+    if(maquina < palpite){
+        dica.innerHTML = 'Um pouco menos'   
+        ponto.innerHTML = tentativas()    
+    }else if (maquina > palpite) {
+        dica.innerHTML = 'Um pouco mais'   
+        ponto.innerHTML = tentativas() 
+    }else {
+        dica.innerHTML = 'Acertou!!'
+        if(tentativa > maxPontuacao){
+            maxPontuacao = tentativa
+        }
+        melhorPonto.innerHTML = maxPontuacao       
     }
-    else if(meuNum < jogador) {
-        dica.innerHTML = 'Um pouco menos...'
-    }
-    else {
-        dica.innerHTML = 'Na mosca!!!'
-        corpo.style.background = 'green'
-        caixa.style.background = 'green'
-        caixa.style.borderColor = 'black'
-        corpo.style.color = 'black'
-    }
-    
 }

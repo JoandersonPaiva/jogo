@@ -35,14 +35,13 @@
                 <input type="number" id="number" min="1" max="20">
             </div>
             <div class="submit">
-                <button type="submit" onclick="jogada()">Check!</button>
+                <button id="click" type="submit" onclick="jogada()">Check!</button>
             </div>
         </aside>
         <aside class="result">
             <div class="dica">Chutando ...</div>
-            <div class="ponto">&#x1F4AF Pontuação:</div>
-            <div class="pontuacao">20</div>
-            <div class="melhor-ponto">&#x1F3C6 Pontuação Máxima: 0</div>
+            <div">&#x1F4AF Pontuação:<span id="ponto">20</span></div>   
+            <div>&#x1F3C6 Pontuação Máxima: <span class="melhorPonto">0</span> </div>
         </aside>
     </main>
     <script src="js/script.js"></script>

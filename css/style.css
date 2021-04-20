@@ -114,6 +114,7 @@ div.num {
 
 .melhor-ponto {
     margin-top: 4%;
+    display: inline;
 }
 .ponto {
     display: inline;
