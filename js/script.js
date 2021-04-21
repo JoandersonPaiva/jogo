@@ -59,7 +59,7 @@ function jogada() {
             dica.innerHTML = 'Um pouco mais'   
             ponto.innerHTML = tentativas() 
         }else {
-            dica.innerHTML = 'Acertou!!'
+            dica.innerHTML = 'Na mosca!!'
             if(tentativa > maxPontuacao){
                 maxPontuacao = tentativa
             }
@@ -73,7 +73,7 @@ function jogada() {
 
 function repetir() {
     let ponto = document.getElementById('ponto')
-    ponto.innerHTML = 20
+    ponto.innerHTML =  20
     maquina = gerarNum()
     tentativa = 20
     layoutNormal()

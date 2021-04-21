@@ -122,3 +122,16 @@ div.num {
 .pontuacao {
     display: inline;
 }
+.caixa {
+    position: absolute;
+    text-align: center;
+    margin-left: 45vw;
+    margin-top: 7vh;
+}
+.caixa p {
+    font-size: 60px;
+    padding: 30px 50px;
+    color:#161515;
+    background-color: whitesmoke;
+    border: solid ;
+}
