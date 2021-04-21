@@ -126,7 +126,7 @@ div.num {
     position: absolute;
     text-align: center;
     margin-left: 45vw;
-    margin-top: 7vh;
+    margin-top: 50px;
 }
 .caixa p {
     font-size: 60px;
@@ -134,4 +134,20 @@ div.num {
     color:#161515;
     background-color: whitesmoke;
     border: solid ;
+}
+@media(max-width: 900px) {
+    .main {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        'cima'
+        'baixo';
+    }
+    .submit {
+        grid-area: 'cima';
+    }
+    .result {
+        grid-area: 'baixo';
+    }
 }
