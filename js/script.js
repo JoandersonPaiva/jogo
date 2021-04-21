@@ -57,23 +57,27 @@ function jogada() {
     let palpite = document.getElementById('number').value
     let melhorPonto = document.getElementsByClassName('melhorPonto')[0]
     melhorPonto.innerHTML = maxPontuacao 
-    if(tentativa > 1) {
-        if(maquina < palpite){
-            dica.innerHTML = 'Um pouco menos'   
-            ponto.innerHTML = tentativas()    
-        }else if (maquina > palpite) {
-            dica.innerHTML = 'Um pouco mais'   
-            ponto.innerHTML = tentativas() 
-        }else {
-            dica.innerHTML = 'Na mosca!!'
-            if(tentativa > maxPontuacao){
-                maxPontuacao = tentativa
-            }
-            melhorPonto.innerHTML = maxPontuacao  
-            layoutVitoria()     
-        }
+    if (palpite.length == 0) {
+        window.alert('Por Favor, digite um número!')
     }else{
-        layoutDerrota()
+        if(tentativa > 1) {
+            if(maquina < palpite){
+                dica.innerHTML = 'Um pouco menos'   
+                ponto.innerHTML = tentativas()    
+            }else if (maquina > palpite) {
+                dica.innerHTML = 'Um pouco mais'   
+                ponto.innerHTML = tentativas() 
+            }else {
+                dica.innerHTML = 'Na mosca!!'
+                if(tentativa > maxPontuacao){
+                    maxPontuacao = tentativa
+                }
+                melhorPonto.innerHTML = maxPontuacao  
+                layoutVitoria()     
+            }
+        }else{
+            layoutDerrota()
+        }
     }
 }
 
