@@ -15,6 +15,8 @@ function tentativas() {
 let corpo = document.getElementsByTagName('body')[0]
 let inputFundo = document.getElementById('number')
 let linha = document.getElementsByTagName('hr')[0]
+
+
 function layoutVitoria() {
     corpo.style.background = '#10ba17'
     corpo.style.color = 'black'
@@ -34,6 +36,8 @@ function layoutNormal() {
     inputFundo.style.background = '#161515'
     dica.innerHTML = 'chutando...'
 }
+
+
 function layoutDerrota() {
     let ponto = document.getElementById('ponto')
     let dica = document.getElementsByClassName('dica')[0]
@@ -45,6 +49,8 @@ function layoutDerrota() {
     dica.innerHTML = 'Tentativas esgotadas!'
     ponto.innerHTML = 0
 }
+
+
 function jogada() {
     let dica = document.getElementsByClassName('dica')[0]
     let ponto = document.getElementById('ponto')
@@ -70,6 +76,7 @@ function jogada() {
         layoutDerrota()
     }
 }
+
 
 function repetir() {
     let ponto = document.getElementById('ponto')
